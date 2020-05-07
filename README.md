@@ -11,7 +11,7 @@
   ###How I used the maps
   I made some maps
   
-  ![Map1] (https://github.com/SteveL5/682_Final/blob/master/Screen%20Shot%202020-05-08%20at%202.16.45%20AM.png)
+  ![Map1] (https://github.com/SteveL5/682_Final/blob/master/Screen%20Shot%202020-05-08%20at%202.16.45%20AM.png?raw=true)
   
   
 ## Automation
