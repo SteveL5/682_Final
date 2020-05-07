@@ -11,7 +11,11 @@
   ###How I used the maps
   I made some maps
   
-  ![alt text](https://github.com/SteveL5/682_Final/blob/master/Screen%20Shot%202020-05-08%20at%202.16.45%20AM.png)
+  ![alt text](https://github.com/SteveL5/682_Final/blob/master/Gun%20Crime%20Image.png)
+  
+  ![alt text](https://github.com/SteveL5/682_Final/blob/master/Shot%20Spotter%20Image.png)
+  
+  
   
   
 ## Automation
