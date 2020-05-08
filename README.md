@@ -57,7 +57,7 @@ def calculate_attributes():
 calculate_attributes()
 ```
 
-The full python code used to automate this analysis can be found in the GitHub Respository under [Final_Code.py] (https://github.com/SteveL5/682_Final/blob/master/Final_Code.py)
+The full python code used to automate this analysis can be found in the GitHub Respository under [Final_Code.py] (https://github.com/SteveL5/682_Final/blob/master/Final_Code.py).
 
 ## Results
 
