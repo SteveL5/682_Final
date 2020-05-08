@@ -30,19 +30,16 @@ gun_crime_2017_join = "S:/682/Spring20/slittel/Final/682_final_data/682_final_da
 gun_crime = iface.addVectorLayer(gun_crime_2017_join,"","ogr")
 ```
 ### Adding a New Field
-
+Once the join layer is added to the map, the script will add a blank field onto the attribute table. Doing this allows for a space where the crimes per 10,000 people number can be calculated. To do this the script will check to see if the data is capable of adding or deleting fields using ```dataProvider().capabilities()```. Next, the script runs the algortim ```QgsVectorDataProvider.AddAttributes``` and ```dataProvider().addAttributes``` to add the desired field names "Crimes_Per". Finally the dataset is updated with the new field.
 ```
 features = gun_crime.getFeatures()
-
 cape = gun_crime.dataProvider().capabilities()
-
 if cape & QgsVectorDataProvider.AddAttributes:
     res = gun_crime.dataProvider().addAttributes([QgsField("Crimes_Per", QVariant.String)])
     gun_crime.updateFields()
 ```
-
 ### Calculating the New Field
-
+Once the field for crimes per 10,000 people is ready and NULL the script runs a forumla using two other columns from the attribute table. The algortim for this is ```def calculate_attributes():``` along with the function ```feature.setAttribute``` to specify the formula and the desired field. Finally, the script updates the faeute and calculates the attributes.
 ```
 target_field = 'Crimes_Per'
 
@@ -54,6 +51,12 @@ def calculate_attributes():
     print('Gun Crimes per 10,000 People in 2017')
 
 calculate_attributes()
+```
+### Round 2 and Results
+Once the scripts completes the process for 2017 Gun Crimes it will run the same code with small chnages for the Shot Spotter. Full results of both layers are printed in the Python console. This is the code to print the Shot Spotter Detections:
+```
+for feature in shot_spotter.getFeatures():
+    print(feature["Label"], 'Incidents Detected', feature["Crimes_Per"])
 ```
 
 The full python code used to automate this analysis can be found in the GitHub Respository under [Final_Code.py](https://github.com/SteveL5/682_Final/blob/master/Final_Code.py).
