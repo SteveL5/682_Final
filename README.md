@@ -1,8 +1,8 @@
-# Comparitive Analysis of Washingtion D.C. Gun Crime Occurnace and Shot Spotter Detection in 2017.
+# Comparative Analysis of Washington D.C. Gun Crime Occurrence and Shot Spotter Detection in 2017
 ## 07 May 2020, Steven Littel
 
 ## Introduction
-  In 2006 the Metropolitan Police Department of Washington D.C. began implimenting the ShotSpotter gun shot detection system in areas of the city with "high population density areas with frequent sounds of gunshots incidents" (http://opendata.dc.gov). While new sensors have been instsalled since and updages have been made, parts of the city still reamns uncovered. This analysis will serve to review the ShotSpotter data from 2017 as well as reported gun crime indicdents in the same year in order to ideitfy the wards in most need of ShotSpotter systems.
+  In 2006 the Metropolitan Police Department of Washington D.C. implemented the ShotSpotter gunshot detection system in areas of the city with "high population density areas with frequent sounds of gunshots incidents" (http://opendata.dc.gov). While new sensors were installed since then and updates have been made, sections of the city still remain uncovered. This analysis will review the ShotSpotter data from 2017 as well as reported gun crime incidents in the same year in order to identify which D.C. wards are the best candidates for expanded ShotSpotter networks.
   
 ## Analysis
   ### Data
