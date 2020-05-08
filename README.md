@@ -19,17 +19,16 @@
   
   
 ## Automation
-The full python code used to automate this analysis can be found in the 
+The automation of the analysis begins with loading and displaying the datasets using ```iface.addVectorlayers```.
 
 ### Joining the Data
-To automate joining the layers by location, I used ```qgis:joinbylocationsummary``` 
+Once the datasets are loaded the script then joins the D.C. Wards polygon layer and the Gun Crime point data using the function ```qgis:joinbylocationsummary```. Once complete the result is added to the map.
 ```
 processing.run("qgis:joinbylocationsummary",       
 {'INPUT':wards,'JOIN':crime_2017,'PREDICATE':1,'SUMMARIES':0,'OUTPUT':"S:/682/Spring20/slittel/Final/682_final_data/682_final_data/gun_crime_join.shp"})
 gun_crime_2017_join = "S:/682/Spring20/slittel/Final/682_final_data/682_final_data/gun_crime_join.shp"
 gun_crime = iface.addVectorLayer(gun_crime_2017_join,"","ogr")
 ```
-
 ### Adding a New Field
 
 ```
