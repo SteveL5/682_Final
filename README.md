@@ -19,6 +19,22 @@
   
   
 ## Automation
+The python code used to automate this analysis.....
+
+Load & View Data:
+
+
+
+```
+wards = "S:/682/Spring20/slittel/Final/682_final_data/682_final_data/ward_from_2012.shp"
+shot_spot = "S:/682/Spring20/slittel/Final/682_final_data/682_final_data/Shot_Spotter_Gun_Shots.shp"
+crime_2017 = "S:/682/Spring20/slittel/Final/682_final_data/682_final_data/Crime_Incidents_in_2017.shp"
+iface.addVectorLayer(wards,"Wards","ogr")
+iface.addVectorLayer(crime_2017,"Crime_2017","ogr")
+iface.addVectorLayer(shot_spot,"Shot_Spotter","ogr")
+```
+
+
 
 ## Results
 
