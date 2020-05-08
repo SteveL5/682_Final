@@ -1,4 +1,4 @@
-# Comparative Analysis of Washington D.C. Gun Crime Occurrence and Shot Spotter Detection in 2017
+# Comparative Analysis of Washington D.C. Gun Crime Occurrence and ShotSpotter Detection in 2017
 ## 07 May 2020, Steven Littel
 
 ## Introduction
