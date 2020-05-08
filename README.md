@@ -2,14 +2,14 @@
 ## 07 May 2020, Steven Littel
 
 ## Introduction
-  Overview of the project
+  In 2006 the Metropolitan Police Department of Washington D.C. began implimenting the ShotSpotter gun shot detection system in areas of the city with "high population density areas with frequent sounds of gunshots incidents" (http://opendata.dc.gov). While new sensors have been instsalled since and updages have been made, parts of the city still reamns uncovered. This analysis will serve to review the ShotSpotter data from 2017 as well as reported gun crime indicdents in the same year in order to ideitfy the wards in most need of ShotSpotter systems.
   
 ## Analysis
   ### Data
-  For this project I used 3 datasets downlaoded from http://opendata.dc.gov. First, the Washington D.C. Ward shapefile and its accompaning information. Second, a point layer for gun crimes committed in Washington D.C. for 2017. Finally, another point layer of gunshots detected by Shot Spotter.
+  For this project I used 3 datasets downlaoded from http://opendata.dc.gov. First, the Washington D.C. Ward shapefile and its accompaning information. Second, a point layer for gun crimes committed in Washington D.C. for 2017. Finally, another point layer of gunshots detected by ShotSpotter.
   
   ### Map Creation
-  In order to create the two maps displayed below, I used QGIS 3.4.9 and the aformentioned data sets. After loading all 3 files into the program I used the function Join by Location with the Ward shapefile. Next, in both newly joined files I created a new field titled Crimes_Per for the calcualtions. Using the Field Calculator, for the Gun Crime data set I used the following formula: (Gun Crime Incidents by Ward / Population 2010) * 10,000. For the Shot Spotter, I used (Shot Spotter Detections by Ward / Population 2010) * 10,000.Once calcualted I editied the symbology of the map to depcited which wards had the highest final count.
+  In order to create the two maps displayed below, I used QGIS 3.4.9 and the aformentioned data sets. After loading all 3 files into the program I used the function Join by Location with the Ward shapefile. Next, in both newly joined files I created a new field titled Crimes_Per for the calcualtions. Using the Field Calculator, for the Gun Crime data set I used the following formula: (Gun Crime Incidents by Ward / Population 2010) * 10,000. For the ShotSpotter, I used (Shot Spotter Detections by Ward / Population 2010) * 10,000.Once calcualted I editied the symbology of the map to depcited which wards had the highest final count.
   
   ![alt text](https://github.com/SteveL5/682_Final/blob/master/Gun%20Crime%20Image.png)
   
@@ -63,7 +63,7 @@ The full python code used to automate this analysis can be found in the GitHub R
 
 ## Results
 
-My reccomendation is to expand the Shot Spotter Detection network in Washington D.C. wards 1, 2, & 3. 
+My reccomendation is to expand the Shot Spotter detection systems in Washington D.C. wards 1, 2, and 3. 
 
 
 
