@@ -25,10 +25,43 @@ The python code used to automate this analysis.....
 
 To automate joining the layers by location, I used ```qgis:joinbylocationsummary``` 
 ```
-processing.run("qgis:joinbylocationsummary",                  {'INPUT':wards,'JOIN':crime_2017,'PREDICATE':1,'SUMMARIES':0,'OUTPUT':"S:/682/Spring20/slittel/Final/682_final_data/682_final_data/gun_crime_join.shp"})
+processing.run("qgis:joinbylocationsummary",       
+{'INPUT':wards,'JOIN':crime_2017,'PREDICATE':1,'SUMMARIES':0,'OUTPUT':"S:/682/Spring20/slittel/Final/682_final_data/682_final_data/gun_crime_join.shp"})
 gun_crime_2017_join = "S:/682/Spring20/slittel/Final/682_final_data/682_final_data/gun_crime_join.shp"
 gun_crime = iface.addVectorLayer(gun_crime_2017_join,"","ogr")
 ```
+
+### Adding a New Field
+
+```
+features = gun_crime.getFeatures()
+
+cape = gun_crime.dataProvider().capabilities()
+
+if cape & QgsVectorDataProvider.AddAttributes:
+    res = gun_crime.dataProvider().addAttributes([QgsField("Crimes_Per", QVariant.String)])
+    gun_crime.updateFields()
+```
+
+### Calculating the New Field
+
+
+```
+target_field = 'Crimes_Per'
+
+def calculate_attributes():
+    with edit(gun_crime):
+        for feature in gun_crime.getFeatures():
+            feature.setAttribute(feature.fieldNameIndex('Crimes_Per'), (feature['CCN_count'] / feature['POP_2010']) * 10000)
+            gun_crime.updateFeature(feature)
+    print('Gun Crimes per 10,000 People in 2017')
+
+calculate_attributes()
+```
+
+
+
+
 
 
 
