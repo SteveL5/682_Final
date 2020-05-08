@@ -22,7 +22,7 @@
 The automation of the analysis begins with loading and displaying the datasets using ```iface.addVectorlayers```.
 
 ### Joining the Data
-Once the datasets are loaded the script then joins the D.C. Wards polygon layer and the Gun Crime point data using the function ```qgis:joinbylocationsummary```. Once complete the result is added to the map.
+Once the datasets are loaded the script then joins the D.C. Wards polygon layer and the Gun Crime point data using the function ```qgis:joinbylocationsummary```. The algortihm combines the vector layers by their location and combines the attribute table of the 'JOIN' layer to the 'INPUT' layer. In the example below we see that a new layer was created with the total number of crimes by Ward being added to the exsiitng arritbute table of the *wards* layer. The processes sets the satge for calculations to be complete on this problem set. Once complete the result is added to the map.
 ```
 processing.run("qgis:joinbylocationsummary",       
 {'INPUT':wards,'JOIN':crime_2017,'PREDICATE':1,'SUMMARIES':0,'OUTPUT':"S:/682/Spring20/slittel/Final/682_final_data/682_final_data/gun_crime_join.shp"})
