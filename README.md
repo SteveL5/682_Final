@@ -5,10 +5,10 @@
   Overview of the project
   
 ## Analysis
-  ### Data:
+  ### Data
   For this project I used 3 datasets downlaoded from http://opendata.dc.gov. First, the Washington D.C. Ward shapefile and its accompaning information. Second, a point layer for gun crimes committed in Washington D.C. for 2017. Finally, another point layer of gunshots detected by Shot Spotter.
   
-  ### Map Creation:
+  ### Map Creation
   In order to create the two maps displayed below, I used QGIS 3.4.9 and the aformentioned data sets. After loading all 3 files into the program I used the function Join by Location with the Ward shapefile. Next, in both newly joined files I created a new field titled Crimes_Per for the calcualtions. Using the Field Calculator, for the Gun Crime data set I used the following formula: (Gun Crime Incidents by Ward / Population 2010) * 10,000. For the Shot Spotter, I used (Shot Spotter Detections by Ward / Population 2010) * 10,000.Once calcualted I editied the symbology of the map to depcited which wards had the highest final count.
   
   ![alt text](https://github.com/SteveL5/682_Final/blob/master/Gun%20Crime%20Image.png)
@@ -19,10 +19,9 @@
   
   
 ## Automation
-The python code used to automate this analysis.....
+The full python code used to automate this analysis can be found in the 
 
-### Joining the Data:
-
+### Joining the Data
 To automate joining the layers by location, I used ```qgis:joinbylocationsummary``` 
 ```
 processing.run("qgis:joinbylocationsummary",       
@@ -45,7 +44,6 @@ if cape & QgsVectorDataProvider.AddAttributes:
 
 ### Calculating the New Field
 
-
 ```
 target_field = 'Crimes_Per'
 
@@ -59,11 +57,7 @@ def calculate_attributes():
 calculate_attributes()
 ```
 
-
-
-
-
-
+The full python code used to automate this analysis can be found in the GitHub Respository under [Final_Code.py] (https://github.com/SteveL5/682_Final/blob/master/Final_Code.py)
 
 ## Results
 
