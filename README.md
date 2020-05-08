@@ -63,7 +63,14 @@ The full python code used to automate this analysis can be found in the GitHub R
 
 ## Results
 
-My reccomendation is to expand the Shot Spotter detection systems in Washington D.C. wards 1, 2, and 3. 
+My reccomendation is to expand the Shot Spotter detection systems in Washington D.C. wards 1, 2, and 6. The ShotSpotter detected only #, #, and # of gunshots per 10,000, respecitvly; where as, there were #, #, and # of gun crimes reported in the wards. 
+
+### Limitations
+A limitation to this analysis is the error rate for the ShotSpotter. While is is a very refiened system, it may make mistakes that could chnage altered. Anothe limitation is the ShotSpotter categorization of multiple gunshots. As stated on D.C.'s open data website, "A ShotSpotter incident may involve one gunshot or multiple gunshots depending on the time elapsed between each shot." This may cause a deterenace from actual numbers if the ShotSpotter picked up multiple gun shots, categorized them under the same serial number, when in reality it was two different instances.
+
+## Sources
+*opendata.dc.gov*
+*https://opendata.dc.gov/datasets/89bfd2aed9a142249225a638448a5276_29*
 
 
 
